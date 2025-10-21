@@ -1,0 +1,624 @@
+@import url(responsive.css);
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-user-select: none;
+    user-select: none;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+body{
+    position: relative;
+    background-image: url(images/images\ \(26\).jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*======== NAVIGATION BAR STYLING=========*/
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter:blur(20px) ;
+    background: transparent;
+    padding: 10px 20px;
+    z-index: 999;
+}
+
+nav .logo {
+    width: fit-content;
+    overflow: hidden;
+}
+
+nav .logo img {
+    width: 200px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+nav .navlinks {
+    width: fit-content;
+}
+
+nav .navlinks ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    list-style-type: none;
+}
+
+nav .navlinks ul li {
+    list-style: none;
+}
+nav .navlinks ul li a{
+    padding: 5px 30px;
+    text-align: center;
+    color: black;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.5s ease;
+}
+
+nav .navlinks ul li a:hover {
+    background-color: black;
+    color: white;
+}
+
+nav .contact {
+    width: fit-content;
+}
+
+nav .contact a {
+    background-color: blue;
+    color: white;
+    font-weight: 600;
+    padding: 5px 30px;
+    border-radius: 3px;
+}
+
+nav button#openBtn {
+    width: fit-content;
+    padding: 5px 20px;
+    font-weight: 600;
+    background-color: blue;
+    color: white;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 2px;
+    display: none;
+    cursor: pointer;
+}
+
+nav button#openBtn div {
+    width: 100%;
+    background-color:blue;
+    height: 2px;
+}
+
+/*Mobile menu*/
+div.mobileMenu.top{
+    opacity: 1;
+}
+
+div.mobileMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    flex-wrap: wrap;
+    gap: 15px;
+    z-index: 1;
+    top:50px;
+    padding:10px 0 ;
+    opacity: 0;
+    width: 100%;
+    background:white;
+    transition: 0.5s ease;
+    -webkit-backdrop-filter: blur(10);
+    backdrop-filter: blur(10);
+    display: none;
+}
+
+div.mobileMenu .navLinks {
+    width: fit-content;
+}
+
+div.mobileMenu .navLinks ul {
+     display: flex;
+    align-items: left;
+    justify-content: center;
+    list-style-type: none;
+    gap: 10px;
+    flex-direction: row;
+}
+
+div.mobileMenu .navLinks ul li {
+    margin: 0;
+    text-align: left;
+}
+
+div.mobileMenu .navLinks ul li a {
+     padding: 5px 10px;
+    text-align: center;
+    color: black;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.5s ease;
+    font-size: 0.875em;
+}
+
+div.mobileMenu .navLinks ul li a:hover {
+    background-color: black;
+    color: white;
+}
+
+div.mobileMenu .mobileContact {
+    width: fit-content;
+}
+div.mobileMenu .mobileContact a {
+     background-color: blue;
+    color: white;
+    font-weight: 600;
+    padding: 3px 20px;
+    border-radius: 3px;
+    font-size: 0.875em;
+}
+
+div.mobileMenu button#closeBtn {
+    width: 50px;
+    background: transparent;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100px;
+}
+/*  HERO PAGE STYLING   */
+div.hero {
+    height: fit-content;
+    transition: 0.5s ease;
+    margin-top: 0;
+    z-index: 20;
+    background: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+div.hero.margin{
+    margin-top: 50px;
+}
+
+.hero .container {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    height: 80vh;
+}
+
+.hero .container .one{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.hero .container .one .text {
+    width: 100%;
+}
+
+.hero .container .one .text h1{
+    font-size: 40px;
+    color: rgb(0, 75, 122);
+    margin-bottom: 10px;
+    font-family: monospace;
+
+}
+
+.hero .container .one .text p {
+    font-size: 1em;
+}
+
+.hero .container .one .cta {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.hero .container .one .cta a{
+    background-color: rgb(25, 55, 87);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 2px;
+}
+.hero .container .one .cta a:last-of-type {
+    background-color: white;
+    color:blue;
+    font-weight: 600;
+    width: 150px;
+    text-align: center;
+}
+.hero .container .one .cta a:last-of-type::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: blue;
+    display: block;
+}
+
+.hero .container .banner {
+    height: 245px;
+}
+
+.hero .container .banner img {
+    height: 100%;
+    border-radius: 3px;
+}
+
+/*   BRIDGE STYLING */
+div.bridge {
+    width: 100%;
+    background: linear-gradient(rgba(7, 22, 49, 0.7), rgba(4, 22, 32, 0.7)), url(images/images\ \(22\).jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center;
+    height: 300px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+div.bridge .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    gap: 30px;
+}
+
+div.bridge .container .desc {
+    width: 80%;
+    text-align: center;
+    height: fit-content;
+}
+
+div.bridge .container .desc h1{
+    color: white;
+    font-size: 3em;
+    font-family: monospace;
+}
+
+div.bridge .container .desc p{
+    color:rgb(213, 190, 190);
+}
+
+div.bridge .container .cta a{
+    width: 100px;
+    padding: 5px 10px;
+    background-color: white;
+    font-weight: 600;
+    border-radius: 3px;
+}
+
+/* =====  BRIDGE STYLING  ============== */
+
+section.latest{
+    width: 100%;
+    padding: 20px;
+}
+
+.latest .container {
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: beige;
+}
+.latest .container .banner {
+    width: 60%;
+}
+.latest .container .banner a {
+    width: 100%;
+}
+.latest .container .banner img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.latest .container .desc {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.latest .container .desc .text {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+}
+
+.latest .container .desc .text h1 {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.latest .container .desc .text h1 span {
+    font-weight: 600;
+    color: blue;
+    font-size: 2.em;
+}
+
+.latest .container .desc .text .cta {
+    width: fit-content;
+}
+
+.latest .container .desc .cta a {
+    background-color: blue;
+    color: white;
+    padding: 5px 30px;
+    font-weight: 560;
+    border-radius: 3px;
+}
+
+/* =====  TEAM STYLING  ============== */
+.bridge.team {
+    background:white;
+    color: black !important;
+    height: 300px;
+}
+
+.bridge.team .container .desc h1{
+    color: black;
+}
+
+.bridge.team .container .desc p{
+    color: black;
+}
+
+section.teams {
+    width: 100%;
+    background-color:transparent;
+}
+
+.teams .container {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+}
+
+.teams .container .member {
+    width: 300px;
+    background-color: beige;
+    padding: 50px;
+    overflow: hidden;
+    border-radius: 3px;
+}
+.teams .container .member .dp {
+    width: 100%;
+}
+
+.teams .container .member .dp img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.teams .container .member .dtls {
+    text-align: justify;
+    background-color: transparent;
+    margin-top: -4em;
+    height: fit-content;
+    width: 100%;
+    background-color: beige;
+}
+
+.teams .container .member .dtls h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.teams .container .member .dtls span {
+    color: blue;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* =====  PARTNERS' STYLING  ============== */
+
+section.partners {
+    width: 100%;
+    height: fit-content;
+    background-color: black;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: white;
+    padding: 20px 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.partners h1 {
+    font-size: 2em;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.partners .container {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    
+}
+
+.partners .container .partner {
+    width: fit-content;
+    overflow: hidden;
+    border-radius: 3px;
+    text-align: center;
+    box-shadow: 1px 1px 20px  rgb(48, 22, 22);
+    padding: 20px;
+}
+
+.partners .container .partner img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 3px;
+}
+
+/* =====  CONTACTS' STYLING  ============== */
+
+section.message {
+    width:100%;
+    margin-bottom: 50px;
+}
+
+.message .container {
+    width: 80%;
+    margin: 0 auto;
+    background: white;
+    padding: 50px 20px;
+    border-radius: 3px;
+    display: flex;
+    gap: 20px;
+}
+
+.message .container form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 20px;
+    text-align: center;
+}
+
+.message .container form .title h1 {
+    color: black;
+    font-weight: 500;
+    font-size: 3em;
+}
+
+.message .container form .inputs {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-content: center;
+    gap: 20px 20px;
+    justify-items: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.message .container form .inputs b {
+    color: grey;
+}
+
+.message .container form .inputs input {
+    padding:10px 30px;
+    background-color:black;
+    color: white;
+    border: none;
+    font-weight: 600;
+    outline: none;
+}
+
+.message .container form .comments {
+    width: 100%;
+}
+
+.message .container form .comments  textarea {
+    width: 100%;
+    height: 200px;
+    resize: none;
+    background-color: beige;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-weight: 800;
+    border-radius: 5px;
+}
+
+.message .container form .submit {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.message .container form .submit input[type='submit'] {
+    width: 50%;
+    padding: 15px 0;
+    border: none;
+    color:white;
+    font-weight: 600;
+    background-color: black;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.message .container .image {
+    width: 50%;
+    height: 552px;
+}
+.message .container .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* =====  FOOTERS' STYLING  ============== */
+
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: grey;
+    text-align: center;
+    display: flex;
+    justify-content: center;align-items: center;
+    gap: 100px;
+}
+
+footer .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;align-items: center;
+    gap: 100px;
+}
+
+footer span {
+    display: block;
+}
